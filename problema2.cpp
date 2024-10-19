@@ -123,7 +123,16 @@ void BTree::insert(int k)
     }
     else{
         if(2*t-1 == root->n){
-            
+            auto* NewNode = new BTreeNode(t, false);
+            int index=0;
+            NewNode->C[index] = root;
+            NewNode->splitChild(index,root);
+            if(NewNode->keys[0]<k){
+                index++;
+            }
+            NewNode->C[index]->insertNonFull(k);
+            root=NewNode;
+    
         }
         else{
             root->insertNonFull(k);
