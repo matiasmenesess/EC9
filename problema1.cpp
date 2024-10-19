@@ -100,7 +100,7 @@ BTreeNode* BTreeNode::search(int k)
     }
 
     if(leaf){ //si es hoja es decir no podemos bajar mas y lo de arriba no se cumplio, significa que no esta
-        return nullptr;
+        return NULL;
     }
 
     return C[index]->search(k); //se busca en el hijo
