@@ -122,7 +122,12 @@ void BTree::insert(int k)
         root = NewNode;
     }
     else{
+        if(root){
 
+        }
+        else{
+            root->insertNonFull(k);
+        }
     }
 }
 
