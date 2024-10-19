@@ -122,8 +122,8 @@ void BTree::insert(int k)
         root = NewNode;
     }
     else{
-        if(root){
-
+        if(2*t-1 == root->n){
+            
         }
         else{
             root->insertNonFull(k);
